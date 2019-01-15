@@ -4,27 +4,40 @@
 
 Text goes here
 
+- Only about linux
+
 ## What are Linux Containers
 
 Analogy: shipping containers
 
-### A quick history
+The idea of separating applications on a single host has been around for quite
+some time. In 1979 chroot could limit file system access and FreeBSD Jails could
+provide multiple indepentend mini-systems, so called "jails" as early as 2000.
 
-- chroot (1979)
-  - Restricting file access
-- FreeBSD Jails (2000)
-  - Partition FreeBSD systems into smaller systems
-- Process Containers and LXC (2006 & 2008)
-  - namespaces and cgroups
-- Docker (2013)
-  - Adding container management capabilities
-- OCI (2015)
-  - Standardization
+However a major leap came from a google project in 2006 as they open sourced
+their "Process Containers" (later changed to "control groups", abbreviated as
+"cgroups"). They have four main goals:
 
-### How do they work
+- Resource limiting
+- Prioritization
+- Accounting
+- Control
+
+Since 2008 we have Linux Containers (LXC), that combine cgroups and namespacing
+to completely isolate applications.
+
+Docker has started to build its software on top of LXC in 2013 but changed to
+its own virtualization engine (libcontainer) one year later, but still relying
+on linux kernel features like cgroups and namespacing.
+
+In 2015 Docker established the Open Container Initiative (short: OCI) to
+standardize the runtime and image specifications. Nowadays there a several OCI-
+based container runtimes like containerd, cri-o, frakti, rkt , ... and of
+course: docker.
+
+### How are they different to virtual machines
 
 - VM vs Containers
-- cgroups and namespaces
 
 ### Advantages and disadvantages
 
