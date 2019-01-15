@@ -39,6 +39,11 @@ course: docker.
 
 - VM vs Containers
 
+Containers are also known as OS-level virtualization. That means that eveything above the operating system is virtulized as opposed to virtual machine where every resource is virtualized.
+![Difference Virtualizations](https://blogs.bmc.com/wp-content/uploads/2017/09/iaas-paas-saas-comparison-1024x759.jpg)
+
+![VM vs Container](https://blog.netapp.com/wp-content/uploads/2016/03/Screen-Shot-2018-03-20-at-9.24.09-AM-935x500.png)
+
 ### Advantages and disadvantages
 
 - Pro
