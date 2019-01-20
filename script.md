@@ -6,7 +6,19 @@ Text goes here
 
 - Only about linux
 
-## What are Linux Containers
+### How are they different to virtual machines
+
+Containers are a type of OS-level virtualization. That means that eveything
+above the operating system is virtualized as opposed to virtual machine where
+every system resource - like CPU, memory and network - is virtualized.
+
+![VM vs
+Container](https://blog.netapp.com/wp-content/uploads/2016/03/Screen-Shot-2018-03-20-at-9.24.09-AM-935x500.png)
+
+Containers invoke the hosts kernel directly. Making them faster to run (no
+privilege-escalation) and faster to start (no guest OS).
+
+## What are Linux Containers exactly
 
 Analogy: shipping containers
 
@@ -34,15 +46,6 @@ In 2015 Docker established the Open Container Initiative (short: OCI) to
 standardize the runtime and image specifications. Nowadays there a several OCI-
 based container runtimes like containerd, cri-o, frakti, rkt , ... and of
 course: docker.
-
-### How are they different to virtual machines
-
-- VM vs Containers
-
-Containers are also known as OS-level virtualization. That means that eveything above the operating system is virtulized as opposed to virtual machine where every resource is virtualized.
-![Difference Virtualizations](https://blogs.bmc.com/wp-content/uploads/2017/09/iaas-paas-saas-comparison-1024x759.jpg)
-
-![VM vs Container](https://blog.netapp.com/wp-content/uploads/2016/03/Screen-Shot-2018-03-20-at-9.24.09-AM-935x500.png)
 
 ### Advantages and disadvantages
 
